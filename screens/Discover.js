@@ -92,7 +92,7 @@ const Discover = () => {
           query={{
             // control google apis here: https://console.cloud.google.com/
             //TODO get rid of key before pushing to git hub
-            key: "AIzaSyDmwzPEpUXOKnOiA7_2wlPExCXlpKA9J70",
+            key: "",
             language: "en",
           }}
         />
@@ -142,18 +142,6 @@ const Discover = () => {
               <Text className="text-[#00539CFF] text-[28px] font-bold">
                 Top Results
               </Text>
-              <TouchableOpacity className="flex-row items-center justify-between space-x-2">
-                <Text className="text-[#EEA47FFF] text-[20px] font-bold">
-                  Explore
-                </Text>
-                {/* https://icons.expo.fyi/ */}
-                {/* Arrow icon */}
-                <FontAwesome
-                  name="long-arrow-right"
-                  size={24}
-                  color="#EEA47FFF"
-                />
-              </TouchableOpacity>
             </View>
 
             {/* Cards: preview of api image, location, title*/}
