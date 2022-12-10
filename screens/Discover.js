@@ -4,7 +4,6 @@ import {
   SafeAreaView,
   Image,
   ScrollView,
-  TouchableOpacity,
   ActivityIndicator,
 } from "react-native";
 import React, { useEffect, useLayoutEffect, useState } from "react";
@@ -13,7 +12,6 @@ import { useNavigation } from "@react-navigation/native";
 import { Attractions, Avatar, Hotels, NotFound, Restaurants } from "../assets";
 import MenuContainer from "../components/MenuContainer";
 
-import { FontAwesome } from "@expo/vector-icons";
 import ItemCardContainer from "../components/ItemCardContainer";
 import { getPlacesData } from "../api";
 
@@ -62,13 +60,6 @@ const Discover = () => {
             the journey today
           </Text>
         </View>
-        <View className="w-12 h-12 rounded-md items-center justify-center">
-          {/* Avatar image: upper right corner */}
-          <Image
-            source={Avatar}
-            className="w-full h-full rounded-full object-cover mb-12"
-          ></Image>
-        </View>
       </View>
 
       {/* Section 2: Search bar, implement google API */}
@@ -83,7 +74,6 @@ const Discover = () => {
             //given in the documentation
             // 'details' is provided when fetchDetails = true
             // update view port to grab the location to fetch from API
-            console.log(details?.geometry?.viewport);
             setBl_lat(details?.geometry?.viewport?.southwest?.lat);
             setBl_lng(details?.geometry?.viewport?.southwest?.lng);
             setTr_lat(details?.geometry?.viewport?.northeast?.lat);

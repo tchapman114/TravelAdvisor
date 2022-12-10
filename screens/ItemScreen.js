@@ -159,11 +159,11 @@ const ItemScreen = ({ route }) => {
             </View>
           )}
           {/* Book now button */}
-          <View className="mt-4 px-4 py-4 rounded-lg bg-[#00539CFF] items-center justify-center mb-12">
+          <TouchableOpacity className="mt-4 px-4 py-4 rounded-lg bg-[#00539CFF] items-center justify-center mb-12">
             <Text className="text-3xl font-semibold uppercase tracking-wider text-white">
               Book Now
             </Text>
-          </View>
+          </TouchableOpacity>
         </View>
       </ScrollView>
     </SafeAreaView>

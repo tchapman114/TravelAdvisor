@@ -1,15 +1,7 @@
-import {
-  View,
-  Text,
-  SafeAreaView,
-  Image,
-  TouchableOpacity,
-} from "react-native";
+import { View, Text, SafeAreaView, TouchableOpacity } from "react-native";
 import React, { useLayoutEffect } from "react";
 import * as Animatable from "react-native-animatable";
-
 import { useNavigation } from "@react-navigation/native";
-import { Plane } from "../assets";
 import { SimpleLineIcons, MaterialCommunityIcons } from "@expo/vector-icons";
 
 const HomeScreen = () => {
@@ -24,9 +16,9 @@ const HomeScreen = () => {
 
   return (
     // flex-1 takes the entire screen
-    <SafeAreaView className="bg-white flex-1 relative">
+    <SafeAreaView className="bg-white flex-1 relative ">
       {/* Section 1 - header */}
-      <View className="flex-row px-6 mt-8 items-center">
+      <View className="flex-row px-6 mt-8 items-center ">
         <View className="h-12.5 bg-[#3B3B3B] items-center justify-center rounded-xl">
           <Text className="text-[#EEA47FFF] text-2xl font-semibold p-3">
             Chapman Travel
@@ -52,14 +44,13 @@ const HomeScreen = () => {
         </Text>
       </View>
 
-      {/* Section 3 - plane display: Circles and a plane icons */}
-      <View className="w-[400px] h-[400px] bg-[#00539CFF] rounded-full absolute bottom-36 -right-36"></View>
-      <View className="w-[400px] h-[400px] bg-[#EEA47FFF] rounded-full absolute -bottom-28 -left-36"></View>
+      {/* Section 3 - plane display: circle and a plane icon */}
+      <View className="w-[400px] h-[400px] bg-[#00539CFF] rounded-full absolute bottom-36 -right-1"></View>
 
       <View className="flex-1 relative items-center justify-center">
         {/* Plane icon from: https://icons.expo.fyi/Fontisto/paper-plane */}
         <View className="mb-20">
-          <SimpleLineIcons name="plane" size={350} color="#3B3B3B" />
+          <SimpleLineIcons name="plane" size={300} color="#EEA47FFF" />
         </View>
 
         {/* Touchable Opacity = changes the color opacity once clicked */}
